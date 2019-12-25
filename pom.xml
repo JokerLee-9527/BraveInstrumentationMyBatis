@@ -13,7 +13,7 @@
 
     <groupId>com.github.JokerLee-9527</groupId>
     <artifactId>brave-instrumentation-mybatis</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>1.0.0</version>
     <name>Brave Instrumentation: MyBatis</name>
 
     <url>https://github.com/JokerLee-9527/Brave-Instrumentation-MyBatis</url>
