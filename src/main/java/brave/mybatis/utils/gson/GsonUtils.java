@@ -79,15 +79,12 @@ public final class GsonUtils {
     return gson.fromJson(gson.toJson(map), type);
   }
 
-  /**
-   * Returns the JSON object as a plain java object by the specified type.
-   * 
-   * @param map
-   *            a Map representation of an object.
-   * @param type
-   *            the type of the desired object.
-   * @return a plain java object by the specified type.
-   */
+	/**
+	 * Returns the JSON object as a plain java object by the specified type.
+	 *
+	 * @param object
+	 * @return a plain java object by the specified type.
+	 */
   public static Map<String, Object> toMap(Object object) {
     return gson.fromJson(gson.toJson(object), Map.class);
   }
