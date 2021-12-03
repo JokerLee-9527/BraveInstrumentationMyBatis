@@ -98,7 +98,6 @@ public class TraceMyBatisInterceptor implements Interceptor {
 
             Object target = invocation.getTarget();
             if (target instanceof Executor) {
-//                Executor executor = (Executor) target;
                 Object[] args = invocation.getArgs();
 
 
@@ -111,13 +110,9 @@ public class TraceMyBatisInterceptor implements Interceptor {
                         parameterObject = invocation.getArgs()[1];
                     }
 
-//                    Connection connection = executor.getTransaction().getConnection();
-//                    String url = connection.getMetaData().getURL();
                     String mapper = statement.getId();
                     int lastIndexOf = mapper.lastIndexOf(".");
                     mapper = mapper.substring(lastIndexOf - 1, mapper.length() - 1);
-//                    String commandName = statement.getSqlCommandType().name();
-//                    log.info("commandName:" + commandName);
                     String sql = statement.getBoundSql(parameterObject).getSql();
                     String paramStr = args[1] == null ? "null" : GsonUtils.toJsonString(args[1]);
 
